@@ -1,0 +1,28 @@
+<!--Design template is from https://getbootstrap.com/-->
+<!--Banner image-->
+<% if (title == "Error") { %>
+<div id="errorBanner" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="content text-center">
+        <!--<h1 class="text-white display-2">Apple Coleene Duquinal</h1>-->
+        <i class="fas fa-exclamation-triangle fa-7x"></i>
+        <h3 class="text-dark display-2 fw-bolder"><%= title %> Page</h3>
+        <div class="col-lg-6 mx-auto">
+            <br>
+            <p class="lead mb-4 text-light">The page you are looking for does not exist.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-secondary btn-lg px-4 gap-3" href="/">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+<% } else { %>
+<div id="banner" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="content text-center">
+        <!--<h1 class="text-white display-2">Apple Coleene Duquinal</h1>-->
+        <h3 class="text-light display-2 fw-bolder" style="background-color: rgba(0, 0, 0, 0.5);">&nbsp;<%= title %>
+            Page&nbsp;</h3>
+        <br>
+        <img class="d-block mx-auto mb-4" src="/Assets/images/logo_red.png" alt="" width="200" height="200">
+    </div>
+</div>
+<% } %>

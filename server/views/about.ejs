@@ -1,0 +1,43 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+<%- include partials/banner.ejs %>
+
+<!--Design template is from https://getbootstrap.com/-->
+
+<!--Main content-->
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Welcome to the <%= title %> page!</h1>
+    <div class="col-lg-6 mx-auto">
+        <br>
+        <p class="lead mb-4">This page is a quick and simple introduction about me and my hobbies.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a class="btn btn-outline-success btn-lg px-4" href="/Assets/pdf_files/ACDD_Resume.pdf"
+                target="_blank">Resume</a>
+            <a class="btn btn-outline-success btn-lg px-4"
+                href="https://ca.linkedin.com/in/apple-coleene-duquinal-2096b71a0" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+
+<div class="clearfix container">
+    <div class="py-5">
+        <img src="/Assets/images/pfp.jpg" class="col-md-4 float-md-start mb-3 me-md-3 img-thumbnail">
+        <p class="fs-5 mb-4">
+            &nbsp; &nbsp; My name is Apple Coleene Duquinal. I was born in Philippines and moved here when I was 15
+            years old.
+            I am in my second year and studying Software Engineering Technology. I took Information Technology for two
+            years before tranfering to my current program.
+            One of my hobbies is photography but mainly landscape.
+        </p>
+    </div>
+</div>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

@@ -1,0 +1,32 @@
+/*
+File name: app.css
+Student’s Name: Apple Coleene Duquinal
+StudentID:  301000645
+Date: October 24, 2021
+*/
+/*Custom css design goes here*/
+#banner {
+    background-image: url('/Assets/images/rainbow-falls.jpg');
+    background-size: cover;
+    opacity: 1;
+}
+
+.stroke-text {
+    -webkit-text-stroke: 5px white;
+}
+
+#errorBanner {
+    background-image: url('/Assets/images/sky.jpg');
+    background-size: cover;
+    opacity: 1;
+}
+
+#expressImg {
+    width: 300px;
+    height: auto;
+}
+
+#modBod {
+    word-wrap: break-word;
+}
+

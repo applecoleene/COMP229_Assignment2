@@ -1,0 +1,90 @@
+<!--Design template is from https://getbootstrap.com/-->
+
+<body onload="sort()">
+  <!--Main navbar-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container-fluid">
+      <a class="navbar-brand display-6" href="/">
+        <img src="/Assets/images/logo_red.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+        Apple Duquinal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+
+          <% if (title == "Home") { %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home"><i class="fas fa-home"></i> Home </a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/home"><i class="fas fa-home"></i> Home </a>
+            <% } %>
+          </li>
+
+          <% if (title == "About Me") { %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/about"><i class="far fa-address-card"></i> About Me
+            </a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/about"><i class="far fa-address-card"></i> About Me </a>
+            <% } %>
+          </li>
+
+          <% if (title == "Projects") { %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/projects"><i class="fas fa-project-diagram"></i>
+              Projects </a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/projects"><i class="fas fa-project-diagram"></i> Projects
+            </a>
+            <% } %>
+          </li>
+
+          <% if (title == "Services") { %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/services"><i class="fas fa-external-link-alt"></i>
+              Services </a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/services"><i class="fas fa-external-link-alt"></i> Services
+            </a>
+            <% } %>
+          </li>
+
+          <% if (title == "Contact") { %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/contacts"><i class="far fa-envelope"></i> Contatcs
+            </a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/contacts"><i class="far fa-envelope"></i> Contatcs </a>
+            <% } %>
+          </li>
+
+          <% if(typeof displayName == 'string' && displayName) { %>
+          <% if (title == "Contact List") { %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/contact-list"><i class="far fa-list-alt"></i> Contatcs
+              List </a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/contact-list"><i class="far fa-list-alt"></i> Contatcs List
+            </a>
+            <% } %>
+          </li>
+          <!--<li class="navbar-text"><i class="fas fa-user"></i> Welcome, <%= displayName %></li>-->
+          <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+          <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+          <% } %>
+
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,72 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+<%- include partials/banner.ejs %>
+
+<!--Design template is from https://getbootstrap.com/-->
+
+<!--Main content-->
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Contact Information</h1>
+            <p class="col-lg-10 fs-4">Contact me here:</p>
+            <p class="col-lg-10 fs-5">Apple Coleene Duquinal<br>Cell: (437) 240-1172<br>Gmail:
+                aduquinal08@gmail.com<br>School Email: aduquina@my.centennialcollege.ca
+            </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <!--<form class="p-4 p-md-5 border rounded-3 bg-light" action="mailto:aduquina@my.centennialcollege.ca"
+                method="post">-->
+            <form class="p-4 p-md-5 border rounded-3 bg-light" id="formName">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="fnamelInput" placeholder="John">
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lnameInput" placeholder="Smith">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="telInput" placeholder="123-456-7890">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="messageInput" rows="3"
+                        placeholder="Write message here. . ."></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="showName()" type="button" value="Submit" data-bs-toggle="modal"
+                    data-bs-target="#outputModal">Submit</button>
+                <input class="btn btn-primary" type="reset" value="Reset">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="outputModal" tabindex="-1" aria-labelledby="outputModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thank you for submitting!</h5>
+            </div>
+            <div class="modal-body" id="modBod">
+                <div id="outMod"></div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-secondary" href="/home">Go to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

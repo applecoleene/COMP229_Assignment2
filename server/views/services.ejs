@@ -1,0 +1,74 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+<%- include partials/banner.ejs %>
+
+<!--Design template is from https://getbootstrap.com/-->
+
+<!--Main content-->
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Welcome to the <%= title %> page!</h1>
+    <div class="col-lg-6 mx-auto">
+        <br>
+        <p class="lead mb-4">These are services that will help you create and design your own website. Contact me if you
+            have questions!</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a class="btn btn-outline-secondary btn-lg px-4" href="/contacts">Contact Me</a>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+-->
+
+<div class="container px-4 py-9">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 text-center">
+        <div class="col d-flex align-items-start">
+
+            <div>
+                <i class="fab fa-bootstrap fa-7x"></i>
+                <h2>Bootstrap</h2>
+                <p>Bootstrap is a free and open-source CSS framework for building responsive, mobile-first front-end web
+                    pages. It also contains designs and use CSS and JavaScript to create buttons, forms, tables,
+                    navbars, and other components. This help with making websites more appealing.</p>
+                <a href="https://getbootstrap.com/" target="_blank" class="btn btn-primary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+            <div>
+                <i class="fab fa-node-js fa-7x"></i>
+                <h2>NodeJs</h2>
+                <p>NodeJS is a free open-source server environment that uses JavaScript. It includes a web application
+                    server framework called ExpressJs for building pages and web applications. It also use npm, a
+                    software library that lets you install code packages that would help build a website.</p>
+                <a href="https://nodejs.org/en/" target="_blank" class="btn btn-primary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+            <div>
+                <i class="fab fa-html5 fa-7x"></i>
+                <h2>HTML 5</h2>
+                <p>HTML (Hyper Text Markup Language) is a markup language for creating web pages. It explaines the
+                    construction of a web page. It includes different type of elements that begin with a starting tag,
+                    content, then finish with an ending tag.</p>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank" class="btn btn-primary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

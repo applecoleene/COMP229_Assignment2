@@ -1,0 +1,138 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+<%- include partials/banner.ejs %>
+
+<!--Design template is from https://getbootstrap.com/-->
+
+<!--Main content-->
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Welcome to the <%= title %> page!</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">This page shows three previous projects that I did alone and with groupmates.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix container">
+    <div class="py-5">
+        <img src="/Assets/images/ghost_game.jpg"
+            class="col-md-4 float-md-start mb-3 me-md-3 btn btn-white img-thumbnail" data-bs-toggle="modal"
+            data-bs-target="#ghostModal">
+        <p class="fs-5 mb-4">
+            &nbsp; &nbsp; This is a web application that lets the user catch the ghost.
+            The ghost pops out in different parts of the canvas and the user needs to catch it
+            before they disappear and pop out to another location within the canvas.
+            It counts the score of the user and adds the speed of the ghost pop-ups.
+            It lets the user reset the score and the speed.
+            This web app is created using HTML and JavaScript.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+
+<div class="clearfix container">
+    <div class="py-5">
+        <img src="/Assets/images/state_diagram.png"
+            class="col-md-4 float-md-end mb-3 ms-md-3 btn btn-white img-thumbnail" data-bs-toggle="modal"
+            data-bs-target="#counterModal">
+        <p class=" fs-5 mb-4">
+            &nbsp; &nbsp; This is the state diagram of the calorie counter application that I planned in Software
+            Engineering Methodologies 1.
+            We did not create the application itself but we created the project using the Software Requirement
+            Specifications (SRS) document.
+            The calorie app lets the user sign-up or log in and will have a chance to look up the calorie of food using
+            the search option in the application.
+            The application also has a calculator that would let the user calculate the calories of food they consume.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+
+<div class="clearfix container">
+    <div class="py-5">
+        <img src="/Assets/images/psa.jpg" class="col-md-4 float-md-start mb-3 me-md-3 btn btn-white img-thumbnail"
+            data-bs-toggle="modal" data-bs-target="#psarModal">
+        <p class="fs-5 mb-4">
+            &nbsp; &nbsp; This project is the first-ever project that I created with my group using HTML.
+            This is a simple project that involves forms and registration. There are different forms as shows in the
+            picture.
+            After registering, there is a list of registrants and the admin themselves has an option to delete any
+            registrants.
+        </p>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ghostModal" tabindex="-1" aria-labelledby="ghostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Catch the Ghost</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="/Assets/images/ghost_game.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="counterModal" tabindex="-1" aria-labelledby="counterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Calorie Counter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="/Assets/images/state_diagram.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="psarModal" tabindex="-1" aria-labelledby="psaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Forms</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="/Assets/images/psa.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

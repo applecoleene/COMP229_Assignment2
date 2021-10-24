@@ -1,0 +1,38 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+<%- include partials/banner.ejs %>
+
+<!--Design template is from https://getbootstrap.com/-->
+
+<!--Main content-->
+<div class="px-4 py-5 my-5 text-center">
+  <!--<h1 class="display-7 fw-bold"><%= title %></h1> -->
+  <h1 class="display-5 fw-bold">Mission</h1>
+  <div class="col-lg-6 mx-auto">
+    <br>
+    <p class="lead mb-4">This website will show a short introduction about me and projects that I have done.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a class="btn btn-outline-secondary btn-lg px-4 gap-3" href="/about">About Me</a>
+      <a class="btn btn-outline-secondary btn-lg px-4" href="/contacts">Contact Me</a>
+    </div>
+  </div>
+</div>
+
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+  <div class="py-5">
+    <h1 class="display-5 fw-bold text-white">Tools to create this site</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4">This site is created using HTML5, ExpressJS, NodeJS, EJS templating engine, and Express
+        Generator. Bootstrap 5 and CSS is used to design the whole website.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

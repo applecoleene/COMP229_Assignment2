@@ -1,0 +1,56 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<%- include ../partials/banner.ejs %>
+
+
+<!--Main content-->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <div class="px-4 py-4 my-4 text-center">
+                <h1 class="display-5 fw-bold">Business <%= title %> Table</h1>
+            </div>
+
+            <table class="table table-bordered table-striped table-hover" id="listTable">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Contact Name</th>
+                    <th class="text-center">Contact Number</th>
+                    <th class="text-center">Email</th>
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                    <th class="text-center"></th>
+                    <th class="text-center"><a href="/contact-list/add" class="btn btn-primary btn-sm" role="button"><i
+                                class="far fa-plus-square"></i> Add a Book </a><br></th>
+                    <% } %>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let i = 0; i < ContactList.length; i++) { %>
+                <tr>
+                    <td class="text-center"><%= ContactList[i].name %></td>
+                    <td class="text-center"><%= ContactList[i].phone %></td>
+                    <td class="text-center"><%= ContactList[i].email %></td>
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                    <td class="text-center">
+                        <a href="/contact-list/edit/<%= ContactList[i]._id %>" class="btn btn-secondary btn-sm"><i
+                                class="fas fa-edit"></i> Edit </a>
+                    </td>
+                    <td class="text-center">
+                        <a href="/contact-list/delete/<%= ContactList[i]._id %>" class="btn btn-danger btn-sm"><i
+                                class="far fa-trash-alt"></i> Delete </a>
+                    </td>
+                    <% } %>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>
